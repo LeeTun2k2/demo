@@ -1,16 +1,6 @@
 language: node_js
 
-node_js: 'stable'
-
-cache: npm
-
-script:
- - npm build
-
-deploy:
-	provider: pages
-	skip_cleanup: true
-	github_token: $leetun2k2
-	local_dir: build
-	on:
-		branch: master
+node_js:
+- "iojs"
+- "7"
+script: npm run test
